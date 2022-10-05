@@ -14,7 +14,7 @@ export const fetchPosts = createAsyncThunk(
             const prevState = getState().posts;
 
             return {
-                items:[...prevState.articles.items, response.data],
+                items:[...prevState.articles.items,...response.data],
                 page: page
             }
 
